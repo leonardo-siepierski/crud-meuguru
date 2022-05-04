@@ -19,46 +19,50 @@ function CreateUser() {
   }
 
   return (
-    <div>
+    <div className='position-absolute top-50 start-50 translate-middle'>
+      <h1>Create User</h1>
       <form onSubmit={saveUser}>
-        <div>
-          <label htmlFor='name'>
+        <div className='mb-3'>
+          <label className='form-label' htmlFor='name'>
             Name:
             <input
               type='text'
               id='name'
               name='name'
+              className='form-control'
               value={ name }
               onChange={(event) => setName(event.target.value)}
             />
           </label>
         </div>
-        <div>
-          <label htmlFor='email'>
+        <div className='mb-3'>
+          <label className='form-label' htmlFor='email'>
             Email:
             <input
               type='text'
               id='email'
               name='email'
+              className='form-control'
               value={ email }
               onChange={(event) => setEmail(event.target.value)}
             />
           </label>
         </div>
-        <div>
-          <label htmlFor='password'>
+        <div className='mb-3'>
+          <label className='form-label' htmlFor='password'>
             Password:
             <input
               type='text'
               id='password'
               name='password'
+              className='form-control'
               value={ password }
               onChange={(event) => setPassword(event.target.value)}
             />
           </label>
         </div>
         <div>
-          <button type='submit'>Save</button>
+          <button className='btn btn-success' type='submit'>Save</button>
         </div>
       </form>
     </div>

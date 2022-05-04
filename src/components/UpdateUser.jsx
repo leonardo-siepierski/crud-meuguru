@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import userService from '../services/requests';
 
@@ -15,45 +15,40 @@ function UpdateUser() {
     });
     setName('');
     setPassword('');
-  }
-
-  useEffect(() => {
-    getUserByEmail();
-  });
-
-  const getUserByEmail = async () => {
-    await userService.getUser(email);
   };
 
   return (
-    <div>
+    <div className='position-absolute top-50 start-50 translate-middle'>
       <form onSubmit={update}>
-        <div>
-          <label htmlFor='name'>
+        <div className='mb-3'>
+          <h1>Update User</h1>
+          <label className='form-label' htmlFor='name'>
             Name:
             <input
               type='text'
               id='name'
               name='name'
+              className='form-control'
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
           </label>
         </div>
-        <div>
-          <label htmlFor='password'>
+        <div className='mb-3'>
+          <label className='form-label' htmlFor='password'>
             Password:
             <input
               type='text'
               id='password'
               name='password'
+              className='form-control'  
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
           </label>
         </div>
         <div>
-          <button type='submit'>Update</button>
+          <button type='submit' className='btn btn-success'>Update</button>
         </div>
       </form>
     </div>

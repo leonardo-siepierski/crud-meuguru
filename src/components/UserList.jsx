@@ -20,33 +20,36 @@ function UserList() {
   }
 
   return (
-    <div>
-      <Link to='/create'>Create User</Link>
-      <table>
-        <thead>
-          <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          {
-            users.map((user, index) => (
-              <tr key={index}>
-                <td>{ user.id }</td>
-                <td>{ user.name }</td>
-                <td>{ user.email }</td>
-                <td>
-                  <Link to={`edit/${user.email}`}>Edit</Link>
-                  <button onClick={() => deleteUser(user.email)}>Delete</button>
-                </td>
-              </tr>
-            ))
-          }
-        </tbody>
-      </table>
+    <div className='position-absolute top-50 start-50 translate-middle'>
+      <div>
+        <h1>Users List</h1>
+        <table className='table'>
+          <thead>
+            <tr>
+              <th scope='col'>Id</th>
+              <th scope='col'>Name</th>
+              <th scope='col'>Email</th>
+              <th scope='col'>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              users.map((user, index) => (
+                <tr key={index}>
+                  <td>{ user.id }</td>
+                  <td>{ user.name }</td>
+                  <td>{ user.email }</td>
+                  <td>
+                    <Link className='btn btn-link' to={`edit/${user.email}`}>Edit</Link>
+                    <button className='btn btn-danger' onClick={() => deleteUser(user.email)}>Delete</button>
+                  </td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+      <Link className='btn btn-link' to='/create'>Create User</Link>
     </div>
   )
 }
