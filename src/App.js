@@ -8,7 +8,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path={'create'} element={<CreateUser />} />
-        <Route path={'update/:email'} element={< UpdateUser/>} />
+        <Route path={'edit/:email'} element={< UpdateUser/>} />
         <Route exact path={'/'} element={<UserList />} />
       </Routes>
     </BrowserRouter>
