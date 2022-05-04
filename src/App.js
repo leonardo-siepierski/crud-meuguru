@@ -3,14 +3,17 @@ import UserList from './components/UserList';
 import CreateUser from './components/CreateUser';
 import UpdateUser from './components/UpdateUser';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Home from './components/Home';
+import './App.css';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path={'create'} element={<CreateUser />} />
-        <Route path={'edit/:email'} element={< UpdateUser/>} />
-        <Route exact path={'/'} element={<UserList />} />
+        <Route path={'users'} element={<UserList />} />
+        <Route path={'users/edit/:email'} element={<UpdateUser />} />
+        <Route exact path={'/'} element={<Home />} />
       </Routes>
     </BrowserRouter>
   );
