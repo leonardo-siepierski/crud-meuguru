@@ -12,6 +12,7 @@
     <li>Prisma ORM</li>
     <li>Express</li>
     <li>PostgreSQL</li>
+    <li>Bootstrap</li>
   </ul>
 </div>
 <div>
