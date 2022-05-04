@@ -1,7 +1,7 @@
 <h1>CRUD application</h1>
 
 <div>
-  <h2>Sobre o projeto</h2>
+  <h3>Sobre o projeto</h3>
   <p>Um projeto que consiste em um CRUD de usuários, com as opções de visualizar os usuários em tabela, adicionar um novo usuário, deletar um usuário e atualizar um usuário.</p>
 </div>
 <div>
