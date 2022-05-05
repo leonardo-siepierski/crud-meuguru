@@ -3,6 +3,7 @@ import {
   createUser,
   deleteUser,
   getAllUsers,
+  getByName,
   getUser, 
   updateUser
 } from '../controllers/usersController';
@@ -16,6 +17,8 @@ import {
 const router = express.Router();
 
 router.get('/', getAllUsers);
+
+router.get('/search', getByName);
 
 router.get('/:email', isUser, getUser);
 

@@ -23,8 +23,23 @@ const getAllUsers = async (_req: Request, res: Response) => {
       name: true,
     },
   });
-
+  
   return res.status(200).json(users);
+};
+
+const getByName = async (req: Request, res: Response) => {
+  const { searchString }: { searchString?: string} = req.query;
+
+  const filteredPosts = await prisma.user.findMany({
+    where: {
+      name: {
+        contains: searchString,
+        mode: 'insensitive',
+      },
+    },
+  });
+
+  return res.status(200).json(filteredPosts);
 };
 
 const getUser = async (req: Request, res: Response) => {
@@ -64,4 +79,4 @@ const updateUser = async (req: Request, res: Response) => {
   return res.status(200).json(user);
 };
 
-export { createUser, getAllUsers, getUser, deleteUser, updateUser };
+export { createUser, getAllUsers, getUser, deleteUser, updateUser, getByName };
