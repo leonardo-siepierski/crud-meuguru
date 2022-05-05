@@ -8,6 +8,10 @@ const getUser = (email) => {
   return api.get(`/users/${email}`);
 };
 
+const getByName = (query) => {
+  return api.get(`/users/search?searchString=${query}`)
+}
+
 const createUser = (user) => {
   return api.post('/users', user);
 };
@@ -26,6 +30,7 @@ const userService = {
   createUser,
   updateUser,
   deleteUser,
+  getByName,
 };
 
 export default userService;
