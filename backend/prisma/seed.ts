@@ -51,56 +51,6 @@ async function seedDB() {
       password: 'mypassword',
     },
   });
-
-  await prisma.user.upsert({
-    where: { email: 'frank@prisma.io' },
-    update: {},
-    create: {
-      email: 'frank@prisma.io',
-      name: 'Frank',
-      password: 'mypassword',
-    },
-  });
-
-  await prisma.user.upsert({
-    where: { email: 'greg@prisma.io' },
-    update: {},
-    create: {
-      email: 'greg@prisma.io',
-      name: 'Greg',
-      password: 'mypassword',
-    },
-  });
-
-  await prisma.user.upsert({
-    where: { email: 'hector@prisma.io' },
-    update: {},
-    create: {
-      email: 'hector@prisma.io',
-      name: 'Hector',
-      password: 'mypassword',
-    },
-  });
-
-  await prisma.user.upsert({
-    where: { email: 'ingrid@prisma.io' },
-    update: {},
-    create: {
-      email: 'ingrid@prisma.io',
-      name: 'Ingrid',
-      password: 'mypassword',
-    },
-  });
-
-  await prisma.user.upsert({
-    where: { email: 'john@prisma.io' },
-    update: {},
-    create: {
-      email: 'john@prisma.io',
-      name: 'John',
-      password: 'mypassword',
-    },
-  });
 }
 
 seedDB();
