@@ -29,8 +29,9 @@
     <li>DATABASE: nome do banco de dados a ser criado</li>
     <li>SCHEMA: tabela do banco de dados a ser criada</li>
   </ul>
-  <p>Em seguida, deve-se instalar as dependências e inicializar o servidor backend:</p>
+  <p>Em seguida, deve-se instalar as dependências, inicializar o banco de dados e inicializar o servidor:</p>
   <p><code>cd backend && npm install</code></p>
+  <p><code>npx prisma migrate dev --name init</code></p>
   <p><code>npm start</code></p>
   <p>Após iniciar o backend, é possível manipular os dados do banco através do terminal ou do navegador:</p>
   <p><code>cd .. && npm install</code></p>
