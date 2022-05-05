@@ -13,6 +13,9 @@ function Header() {
           <li className='nav-item'>
             <a className='nav-link' href='/search'>Search by email</a>
           </li>
+          <li className='nav-item'>
+            <a className='nav-link' href='/search/name'>Search by name</a>
+          </li>
         </ul>
       </div>
     </header>

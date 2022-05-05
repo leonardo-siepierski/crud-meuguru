@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './components/Home';
 import './App.css';
 import SearchUser from './components/SearchUser';
+import SearchByName from './components/SearchByName';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path={'users'} element={<UserList />} />
         <Route path={'users/edit/:email'} element={<UpdateUser />} />
         <Route path={'search'} element={<SearchUser />} />
+        <Route path={'search/name'} element={<SearchByName />} />
         <Route exact path={'/'} element={<Home />} />
       </Routes>
     </BrowserRouter>
