@@ -18,7 +18,7 @@
 <div>
   <h2>Utilização</h2>
   <p>Para utilizar o projeto, é necessário ter instalado o PostgreSQL e terminal shell. Primeiro, é necessário clonar o projeto:</p>
-  <p><code>git clone git@github.com:leonardo-siepierski/crud-meuguru.git</code></p>
+  <p><code>git clone git@github.com:leonardo-siepierski/users-crud.git</code></p>
   <p>Depois disso, criar um arquivo .env, como no .env.example, substituindo os seguintes valores:</p>
   <p>DATABASE_URL="postgresql://USER:PASSWORD@HOST:PORT/DATABASE?schema=SCHEMA"</p>
   <ul>
