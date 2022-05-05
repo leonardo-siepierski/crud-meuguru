@@ -11,7 +11,7 @@ function Header() {
             <a className='nav-link' href='/users'>Users</a>
           </li>
           <li className='nav-item'>
-            <a className='nav-link' href='/search'>Search user</a>
+            <a className='nav-link' href='/search'>Search by email</a>
           </li>
         </ul>
       </div>

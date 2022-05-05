@@ -5,6 +5,7 @@ import UpdateUser from './components/UpdateUser';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './components/Home';
 import './App.css';
+import SearchUser from './components/SearchUser';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path={'create'} element={<CreateUser />} />
         <Route path={'users'} element={<UserList />} />
         <Route path={'users/edit/:email'} element={<UpdateUser />} />
+        <Route path={'search'} element={<SearchUser />} />
         <Route exact path={'/'} element={<Home />} />
       </Routes>
     </BrowserRouter>
