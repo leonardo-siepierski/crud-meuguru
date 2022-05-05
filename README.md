@@ -2,7 +2,7 @@
 
 <div>
   <h3>Sobre o projeto</h3>
-  <p>Um projeto que consiste em um CRUD de usuários, com as opções de visualizar os usuários em tabela, adicionar um novo usuário, deletar um usuário e atualizar um usuário.</p>
+  <p>Um projeto que consiste em um CRUD de usuários, com as opções de visualizar os usuários em tabela, buscar um usuário por email, buscar usuários por nome, adicionar um novo usuário, deletar um usuário e atualizar um usuário.</p>
 </div>
 <div>
   <h2>Tecnologias utilizadas:</h2>
@@ -29,8 +29,9 @@
     <li>DATABASE: nome do banco de dados a ser criado</li>
     <li>SCHEMA: tabela do banco de dados a ser criada</li>
   </ul>
-  <p>Em seguida, deve-se instalar as dependências e inicializar o servidor backend:</p>
+  <p>Em seguida, deve-se instalar as dependências, inicializar o banco de dados e inicializar o servidor:</p>
   <p><code>cd backend && npm install</code></p>
+  <p><code>npx prisma migrate dev --name init</code></p>
   <p><code>npm start</code></p>
   <p>Após iniciar o backend, é possível manipular os dados do banco através do terminal ou do navegador:</p>
   <p><code>cd .. && npm install</code></p>
