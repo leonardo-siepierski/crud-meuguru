@@ -36,4 +36,4 @@
   <p>Para iniciar o backend:<p/>
   <p><code>npm start</code></p>
   <p>Após iniciar o backend, é possível manipular os dados do banco através do terminal ou do navegador:</p>
-  <p><code>npm start</code></p>
+  <p><code>cd .. && npm start</code></p>
