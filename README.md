@@ -19,7 +19,8 @@
   <h2>Utilização</h2>
   <p>Para utilizar o projeto, é necessário ter instalado o PostgreSQL e terminal shell. Primeiro, é necessário clonar o projeto:</p>
   <p><code>git clone git@github.com:leonardo-siepierski/users-crud.git</code></p>
-  <p>Depois disso, criar um arquivo .env, como no .env.example, substituindo os seguintes valores:</p>
+  <p>Depois disso, entrar na pasta do projeto e criar um arquivo .env, como no .env.example, substituindo os respectivos valores:</p>
+  <p><code>cd users-crud/backend</code></p>
   <p>DATABASE_URL="postgresql://USER:PASSWORD@HOST:PORT/DATABASE?schema=SCHEMA"</p>
   <ul>
     <li>USER: seu usuário do PostgreSQL</li>
@@ -29,11 +30,11 @@
     <li>DATABASE: nome do banco de dados a ser criado</li>
     <li>SCHEMA: tabela do banco de dados a ser criada</li>
   </ul>
-  <p>Em seguida, deve-se instalar as dependências do back, do front, inicializar e popular o banco de dados:</p>
+  <p>Em seguida, deve-se instalar as dependências do back, inicializar e popular o banco de dados:</p>
   <p><code>npm install</code></p>
-  <p><code>cd backend && npm install</code></p>
   <p><code>npx prisma migrate dev --name init</code></p>
   <p>Para iniciar o backend:<p/>
   <p><code>npm start</code></p>
-  <p>Após iniciar o backend, é possível manipular os dados do banco através do terminal ou do navegador:</p>
-  <p><code>cd .. && npm start</code></p>
+  <p>Após iniciar o backend, em outro terminal, instale as dependências e inicialize o frontend:</p>
+  <p><code>cd .. && npm install</code></p>
+  <p><code>npm start</code></p>
