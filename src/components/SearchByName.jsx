@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import userService from '../services/requests';
 import Header from './Header';
+import Pagination from 'react-paginate';
 
 function SearchByName() {
   const [name, setName] = useState('');
   const [users, setUsers] = useState([]);
   const [isUsers, setIsUsers] = useState(false);
+  const [pageNumber, setPageNumber] = useState(0);
 
   const getByName = async (event) => {
     event.preventDefault();
@@ -22,6 +24,25 @@ function SearchByName() {
     setUsers([]);
     setName('');
   };
+
+  const usersPerPage = 5;
+  const pagesVisited = pageNumber * usersPerPage;
+  const pageCount = Math.ceil(users.length / usersPerPage);
+  const changePage = ({ selected }) => {
+    setPageNumber(selected);
+  };
+  
+    const displayUsers = users
+      .slice(pagesVisited, pagesVisited + usersPerPage)
+      .map((user, index) => {
+        return (
+          <tr key={index}>
+            <td>{ user.id }</td>
+            <td>{ user.name }</td>
+            <td>{ user.email }</td>
+          </tr>
+        )
+      });
 
   return (
     <div>
@@ -40,16 +61,22 @@ function SearchByName() {
                 </thead>
                 <tbody>
                   {
-                    users.map((user, index) => (
-                      <tr key={index}>
-                        <td>{ user.id }</td>
-                        <td>{ user.name }</td>
-                        <td>{ user.email }</td>
-                      </tr>
-                    ))
+                    displayUsers
                   }
                 </tbody>
               </table>
+              <Pagination
+                previousLabel={"Previous"}
+                nextLabel={"Next"}
+                pageCount={pageCount}
+                onPageChange={changePage}
+                containerClassName={"pagination container"}
+                previousLinkClassName={"page-link"}
+                pageLinkClassName={"page-link"}
+                nextLinkClassName={"page-link"}
+                disabledClassName={"page-item disabled"}
+                activeClassName={"page-item active"}
+              />
               <button type='button' onClick={returnButton} className='btn btn-success'>
                 Return
               </button>
